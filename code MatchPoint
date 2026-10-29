@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatchPoint — Теннисный клуб премиум-класса</title>
+
+  <!-- SEO (Этап 7) -->
+  <meta name="description" content="Теннисный клуб MatchPoint в Москве: 4 крытых корта (грунт и Hard), тренеры ATP/WTA, абонементы и онлайн-бронирование. Работаем ежедневно с 07:00 до 23:00.">
+  <meta name="theme-color" content="#0f3d28">
+  <link rel="canonical" href="https://matchpoint-club.ru/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f3d28'/><circle cx='50' cy='50' r='28' fill='%23d4ec28'/></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MatchPoint — Теннисный клуб">
+  <meta property="og:title" content="MatchPoint — Теннисный клуб премиум-класса">
+  <meta property="og:description" content="4 крытых корта, тренеры ATP/WTA и онлайн-бронирование. Работаем ежедневно с 07:00 до 23:00.">
+  <meta property="og:url" content="https://matchpoint-club.ru/">
+  <meta property="og:image" content="https://matchpoint-club.ru/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MatchPoint — Теннисный клуб премиум-класса">
+  <meta name="twitter:description" content="4 крытых корта, тренеры ATP/WTA и онлайн-бронирование.">
+  <meta name="twitter:image" content="https://matchpoint-club.ru/og-cover.jpg">
+
+  <!-- Шрифты (P1/C6: preconnect + display=swap; self-hosting woff2 — этап 8, P2) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Стили: разделение на слои (Этап 1) -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Структурированные данные (Этап 7): TennisClub / LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "SportsActivityLocation"],
+    "name": "Теннисный клуб MatchPoint",
+    "description": "Крытые корты с грунтовым и Hard-покрытием, тренеры ATP/WTA, прокат ракеток и онлайн-бронирование.",
+    "url": "https://matchpoint-club.ru/",
+    "telephone": "+74951234567",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Москва",
+      "streetAddress": "Лужнецкая набережная, 24, стр. 5"
+    },
+    "openingHours": "Mo-Su 07:00-23:00",
+    "priceRange": "₽₽",
+    "sameAs": [
+      "https://t.me/matchpoint_club",
+      "https://wa.me/74951234567",
+      "https://vk.com/matchpoint_club"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip-link (Этап 3): быстрый переход к содержимому -->
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- M11: фолбэк без JavaScript -->
+  <noscript>
+    <div class="noscript-note">
+      Включите JavaScript, чтобы бронировать корты онлайн, или позвоните нам:
+      <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+    </div>
+  </noscript>
+
+  <!-- ==================== 1. HEADER ==================== -->
+  <header class="header">
+    <div class="container header-inner">
+      <!-- M2: логотип ведёт на начало страницы -->
+      <a href="#hero" class="logo" aria-label="MatchPoint Tennis Club — на главную">
+        <span class="logo-icon" aria-hidden="true">
+          <span class="logo-ball"></span>
+        </span>
+        <span>Match<span class="logo-point">Point</span></span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">Корты</a></li>
+          <li><a href="#coaches" class="nav-link">Тренеры</a></li>
+          <li><a href="#pricing" class="nav-link">Цены</a></li>
+          <li><a href="#schedule" class="nav-link">Расписание</a></li>
+          <li><a href="#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="#booking" class="btn btn-primary">Забронировать корт</a>
+        <!-- J5: aria-controls + сменяемый aria-label в js/main.js -->
+        <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badges">
+            <span class="hero-pill"><span class="dot" aria-hidden="true"></span> 4 крытых корта</span>
+            <span class="hero-pill"><span class="dot dot-clay" aria-hidden="true"></span> Грунт и Hard (ITF)</span>
+            <!-- M5: эмодзи заменены на SVG-иконку -->
+            <span class="hero-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 18h6"></path>
+                <path d="M10 22h4"></path>
+                <path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"></path>
+              </svg>
+              Профессиональный свет 1000 Люкс
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            Твой решающий розыгрыш в клубе <span class="highlight">MatchPoint</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Профессиональные покрытия с идеальным отскоком, сертифицированные тренеры ATP/WTA и камерная клубная атмосфера для игроков любого уровня.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#booking" class="btn btn-accent">Забронировать корт</a>
+            <a href="#pricing" class="btn btn-outline-light">Смотреть расписание и цены</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="court-showcase">
+            <!-- M6: схема корта — осмысленная роль, декоративные слои скрыты -->
+            <div class="court-art" role="img" aria-label="Схема грунтового теннисного корта MatchPoint">
+              <div class="court-lines" aria-hidden="true">
+                <div></div>
+                <div class="court-service-box"></div>
+                <div></div>
+                <div class="court-net"></div>
+              </div>
+              <div class="floating-ball" aria-hidden="true"></div>
+            </div>
+            <!-- M10: статические «живые» данные заменены на достоверную информацию -->
+            <div class="court-status-bar">
+              <div class="status-indicator">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                <span>Открыто ежедневно 07:00 – 23:00</span>
+              </div>
+              <span>Крытые корты — играйте в любую погоду</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. ADVANTAGES / ABOUT CLUB ==================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-clay">О клубе MatchPoint</span>
+          <h2 class="section-title">Инфраструктура уровня турниров Большого шлема</h2>
+          <p class="section-subtitle">
+            Мы продумали каждую деталь — от амортизации покрытия до температуры в сауне после интенсивного матча.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Покрытие мирового уровня</h3>
+            <p class="feature-desc">
+              2 корта с европейским грунтом Red Clay и 2 корта с многослойным покрытием Hard Cushion, бережным к связкам и суставам.
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Раздевалки и финская сауна</h3>
+            <p class="feature-desc">
+              Просторные раздевалки с системой климат-контроля, свежими полотенцами, премиальной косметикой и сауной из кедра.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Клубное кафе и лаунж</h3>
+            <p class="feature-desc">
+              Панорамный вид на корты, свежеобжаренный спешелти-кофе, изотоники, смузи и сбалансированное спортивное меню.
+            </p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M14.31 8l5.74 9.94"></path>
+                <path d="M9.69 8h11.48"></path>
+                <path d="M7.38 12l5.74-9.94"></path>
+                <path d="M9.69 16L3.95 6.06"></path>
+                <path d="M14.31 16H2.83"></path>
+                <path d="M16.62 12l-5.74 9.94"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Прокат и услуги стрингера</h3>
+            <p class="feature-desc">
+              Тест-драйв топовых ракеток Babolat, Wilson и Head. Профессиональная перетяжка струн на электронном станке за 30 минут.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. PRICING & SCHEDULE ==================== -->
+    <section class="section pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-lime">Тарифы и расписание</span>
+          <h2 class="section-title">Прозрачные условия для регулярной игры</h2>
+          <p class="section-subtitle">
+            Выбирайте разовые визиты, выгодные клубные абонементы или индивидуальные занятия с профи.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Tariff 1 -->
+          <div class="price-card">
+            <div>
+              <h3 class="price-title">Разовая аренда</h3>
+              <p class="price-subtitle">Идеально для спарринга с друзьями в удобное время</p>
+              <div class="price-amount">
+                2 800 ₽ <span class="price-period">/ час</span>
+              </div>
+              <ul class="price-features">
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>Любое покрытие: Грунт или Hard</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>До 4 игроков на одном корте</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>Полотенце и питьевая вода включены</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>Бесплатная отмена за 24 часа</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#booking" class="btn btn-outline-dark" data-select-service="court">Выбрать корт</a>
+          </div>
+
+          <!-- Tariff 2 (Popular) -->
+          <div class="price-card popular">
+            <span class="popular-tag">Популярный выбор</span>
+            <div>
+              <h3 class="price-title">Абонемент «Клубный»</h3>
+              <p class="price-subtitle">10 часов аренды с фиксацией любимого времени</p>
+              <div class="price-amount">
+                23 000 ₽ <span class="price-period">/ 10 часов</span>
+              </div>
+              <ul class="price-features">
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>Выгода 5 000 ₽ (2 300 ₽ / час)</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>Приоритетное бронирование слотов</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>Корзина мячей и сауна без доплат</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>Заморозка абонемента до 14 дней</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#booking" class="btn btn-accent" data-select-service="pass">Оформить абонемент</a>
+          </div>
+
+          <!-- Tariff 3 -->
+          <div class="price-card">
+            <div>
+              <h3 class="price-title">С тренером Pro</h3>
+              <p class="price-subtitle">Персональная тренировка «под ключ» вместе с кортом</p>
+              <div class="price-amount">
+                5 200 ₽ <span class="price-period">/ час</span>
+              </div>
+              <ul class="price-features">
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>Аренда корта уже входит в стоимость</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>Индивидуальный план и видеоразбор</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>Ракетки и корзина на 100 мячей</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </span>
+                  <span>Подходит для новичков и детей</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#booking" class="btn btn-outline-dark" data-select-service="coach">Записаться к тренеру</a>
+          </div>
+        </div>
+
+        <!-- Schedule Block -->
+        <div class="schedule-box" id="schedule">
+          <div class="schedule-header">
+            <div>
+              <h3>Режим работы и временные слоты</h3>
+              <!-- M4: классы вместо инлайн-стилей -->
+              <p class="schedule-note">Клуб открыт ежедневно с 07:00 до 23:00 без выходных</p>
+            </div>
+            <span class="badge badge-clay schedule-badge">Бронь кратна 1 часу</span>
+          </div>
+          <div class="schedule-slots">
+            <div class="slot-item">
+              <div class="slot-time">Утро: 07:00 – 12:00</div>
+              <div class="slot-info">Скидка 15% на разовую аренду кортов в будние дни</div>
+            </div>
+            <div class="slot-item">
+              <div class="slot-time">День: 12:00 – 17:00</div>
+              <div class="slot-info">Оптимальное время для индивидуальных и детских секций</div>
+            </div>
+            <div class="slot-item peak">
+              <div class="slot-time">Прайм-тайм: 17:00 – 23:00</div>
+              <div class="slot-info">Высокий спрос, рекомендуем бронировать за 2–3 дня</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. COACHES ==================== -->
+    <section class="section" id="coaches">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-clay">Команда MatchPoint</span>
+          <h2 class="section-title">Тренерский состав клуба</h2>
+          <p class="section-subtitle">
+            Действующие призеры турниров и дипломированные наставники, которые поставят технику с нуля или усилят вашу подачу.
+          </p>
+        </div>
+
+        <div class="coaches-grid">
+          <!-- Coach 1 -->
+          <article class="coach-card">
+            <div class="coach-visual">
+              <div class="coach-avatar" aria-hidden="true">АВ</div>
+              <span class="coach-exp-badge">Стаж 12 лет</span>
+            </div>
+            <div class="coach-body">
+              <h3 class="coach-name">Алексей Волков</h3>
+              <div class="coach-rank">Мастер спорта, главный тренер клуба</div>
+              <p class="coach-bio">
+                Экс-игрок топ-400 ATP. Специализируется на тактике ведения матча, мощной первой подаче и подготовке к любительским турнирам Pro-Am.
+              </p>
+              <div class="coach-tags">
+                <span class="tag">Тактика и спарринг</span>
+                <span class="tag">Взрослые Pro</span>
+                <span class="tag">Постановка подачи</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Coach 2 -->
+          <article class="coach-card">
+            <div class="coach-visual">
+              <div class="coach-avatar" aria-hidden="true">ЕС</div>
+              <span class="coach-exp-badge">Стаж 9 лет</span>
+            </div>
+            <div class="coach-body">
+              <h3 class="coach-name">Елена Соколова</h3>
+              <div class="coach-rank">КМС, лицензия ITF Level 2</div>
+              <p class="coach-bio">
+                Бережно влюбляет в теннис с первой тренировки. Поставит биомеханически правильный удар без риска травм и перегрузок.
+              </p>
+              <div class="coach-tags">
+                <span class="tag">Обучение с нуля</span>
+                <span class="tag">Кардио-теннис</span>
+                <span class="tag">Женские группы</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Coach 3 -->
+          <article class="coach-card">
+            <div class="coach-visual">
+              <div class="coach-avatar" aria-hidden="true">ДМ</div>
+              <span class="coach-exp-badge">Стаж 8 лет</span>
+            </div>
+            <div class="coach-body">
+              <h3 class="coach-name">Дмитрий Морозов</h3>
+              <div class="coach-rank">Сертифицированный специалист 10S</div>
+              <p class="coach-bio">
+                Руководитель юниорского направления MatchPoint. Развивает координацию, работу ног и игровой интеллект у детей от 5 до 16 лет.
+              </p>
+              <div class="coach-tags">
+                <span class="tag">Дети 5–16 лет</span>
+                <span class="tag">Техника работы ног</span>
+                <span class="tag">Мини-теннис</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. BOOKING FORM ==================== -->
+    <section class="section booking-section" id="booking">
+      <div class="container">
+        <div class="booking-wrapper">
+          <div class="booking-info">
+            <span class="badge badge-lime">Онлайн-заявка</span>
+            <h2>Забронируйте свой корт в MatchPoint за 1 минуту</h2>
+            <p>
+              Оставьте контакты и желаемое время — администратор проверит наличие свободного корта и пришлет подтверждение в Telegram или по SMS.
+            </p>
+            <ul class="booking-perks">
+              <li class="booking-perk">
+                <span class="booking-perk-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Мгновенное подтверждение без предоплаты на сайте</span>
+              </li>
+              <li class="booking-perk">
+                <span class="booking-perk-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Скидка 20% на первую вводную тренировку с тренером</span>
+              </li>
+              <li class="booking-perk">
+                <span class="booking-perk-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Бесплатная закрытая парковка для гостей клуба</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="booking-form-card">
+            <!-- M9: autocomplete, inputmode, pattern, кастомные ошибки -->
+            <form id="bookingForm" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="userName" class="form-label">Ваше имя *</label>
+                  <input type="text" id="userName" name="userName" class="form-control"
+                         placeholder="Александр" autocomplete="name" minlength="2" required
+                         aria-describedby="userNameError">
+                  <small class="form-error" id="userNameError" hidden>Введите имя (минимум 2 символа)</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="userPhone" class="form-label">Телефон *</label>
+                  <input type="tel" id="userPhone" name="userPhone" class="form-control"
+                         placeholder="+7 (999) 000-00-00" autocomplete="tel" inputmode="tel"
+                         pattern="\+?[0-9\s\-()]{10,18}" required
+                         aria-describedby="userPhoneError">
+                  <small class="form-error" id="userPhoneError" hidden>Введите корректный номер телефона</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="bookingDate" class="form-label">Желаемая дата и время *</label>
+                  <input type="datetime-local" id="bookingDate" name="bookingDate" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="serviceType" class="form-label">Тип корта / услуги *</label>
+                  <select id="serviceType" name="serviceType" class="form-control" required>
+                    <option value="court-clay">Аренда корта — Грунт (Red Clay)</option>
+                    <option value="court-hard">Аренда корта — Hard Cushion</option>
+                    <option value="coach">Персональная тренировка с тренером</option>
+                    <option value="pass">Покупка абонемента «Клубный»</option>
+                    <option value="kids">Детская секция / Пробное занятие</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit">
+                Отправить заявку на бронь
+              </button>
+              <p class="form-note">
+                Нажимая кнопку, вы соглашаетесь с правилами клуба и обработкой персональных данных.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 7. CONTACTS & FOOTER ==================== -->
+  <footer class="footer" id="contacts">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <!-- M2, M4: логотип с классом вместо инлайн-стилей -->
+          <a href="#hero" class="logo logo--footer" aria-label="MatchPoint Tennis Club — на главную">
+            <span class="logo-icon" aria-hidden="true">
+              <span class="logo-ball"></span>
+            </span>
+            <span>Match<span class="logo-point">Point</span></span>
+          </a>
+
+          <!-- M12: контакты в семантическом <address>, иконки — SVG (M5) -->
+          <address class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Адрес клуба</div>
+                <div class="contact-value">г. Москва, Лужнецкая набережная, 24, стр. 5</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Время работы</div>
+                <div class="contact-value">Ежедневно с 07:00 до 23:00</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-label">Телефон ресепшн</div>
+                <div class="contact-value"><a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
+              </div>
+            </div>
+          </address>
+
+          <!-- M3: реальные (нерабочие-пустые) адреса соцсетей клуба -->
+          <div class="social-links">
+            <a href="https://t.me/matchpoint_club" target="_blank" rel="noopener" class="social-btn">Telegram</a>
+            <a href="https://wa.me/74951234567" target="_blank" rel="noopener" class="social-btn">WhatsApp</a>
+            <a href="https://vk.com/matchpoint_club" target="_blank" rel="noopener" class="social-btn">VK</a>
+          </div>
+        </div>
+
+        <!-- M6: «живой» регион с корректной ролью -->
+        <div class="map-card" role="region" aria-label="Карта проезда в клуб MatchPoint">
+          <div class="map-pin-box">
+            <div class="map-pin-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M14.31 8l5.74 9.94"></path>
+                <path d="M9.69 8h11.48"></path>
+                <path d="M7.38 12l5.74-9.94"></path>
+                <path d="M9.69 16L3.95 6.06"></path>
+                <path d="M14.31 16H2.83"></path>
+                <path d="M16.62 12l-5.74 9.94"></path>
+              </svg>
+            </div>
+            <!-- M4: классы вместо инлайн-стилей -->
+            <div class="map-title">Теннисный клуб MatchPoint</div>
+            <div class="map-sub">
+              5 минут пешком от м. Воробьевы горы • Своя парковка
+            </div>
+            <!-- M8: маршрут ведёт в навигатор, а не на форму -->
+            <a href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%9B%D1%83%D0%B6%D0%BD%D0%B5%D1%86%D0%BA%D0%B0%D1%8F%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F%2C%2024%2C%20%D1%81%D1%82%D1%80.%205" target="_blank" rel="noopener" class="btn btn-accent map-route-btn">
+              Построить маршрут
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Теннисный клуб «MatchPoint». Все права защищены.</div>
+        <div>Разработано для ценителей большого тенниса</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <div class="toast-icon" aria-hidden="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M14.31 8l5.74 9.94"></path>
+        <path d="M9.69 8h11.48"></path>
+        <path d="M7.38 12l5.74-9.94"></path>
+        <path d="M9.69 16L3.95 6.06"></path>
+        <path d="M14.31 16H2.83"></path>
+        <path d="M16.62 12l-5.74 9.94"></path>
+      </svg>
+    </div>
+    <div>
+      <div class="toast-title">Заявка в MatchPoint принята!</div>
+      <div class="toast-msg" id="toastMsg">Мы свяжемся с вами в течение 10 минут для подтверждения корта.</div>
+    </div>
+  </div>
+
+  <!-- Скрипты: единый модуль с defer (Этап 5) -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
