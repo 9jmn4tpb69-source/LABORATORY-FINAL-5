@@ -748,6 +748,120 @@ address {
   gap: 2rem;
 }
 
+/* --- 5b. GALLERY: карусель фотографий --- */
+.gallery-section {
+  overflow: hidden;
+}
+
+.gallery-carousel {
+  position: relative;
+  /* Блок расширен до ширины контента: фото видно крупнее */
+  max-width: 1120px;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--primary-dark);
+}
+
+.gallery-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.gallery-slide {
+  position: relative;
+  min-width: 100%;
+  user-select: none;
+}
+
+.gallery-slide img {
+  width: 100%;
+  /* Увеличенная высота: фото занимает больше места по вертикали */
+  height: clamp(280px, 54vw, 600px);
+  object-fit: cover;
+  object-position: center center;
+}
+
+.gallery-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2.4rem 1.5rem 2.6rem;
+  background: linear-gradient(180deg, rgba(8, 38, 24, 0) 0%, rgba(8, 38, 24, 0.85) 70%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.gallery-nav:hover {
+  background: var(--accent);
+  color: var(--primary-dark);
+  border-color: var(--accent);
+}
+
+.gallery-nav svg {
+  width: 22px;
+  height: 22px;
+}
+
+.gallery-prev { left: 1rem; }
+.gallery-next { right: 1rem; }
+
+.gallery-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+
+.gallery-dot.is-active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-track { transition: none; }
+}
+
+@media (max-width: 640px) {
+  .gallery-nav { width: 38px; height: 38px; }
+  .gallery-prev { left: 0.5rem; }
+  .gallery-next { right: 0.5rem; }
+}
+
 /* --- 6. BOOKING: каркас --- */
 .booking-section {
   background-color: var(--bg-secondary);
@@ -1960,6 +2074,57 @@ address {
       </div>
     </section>
 
+    <!-- ==================== 5b. PHOTO GALLERY CAROUSEL ==================== -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-lime">Атмосфера клуба</span>
+          <h2 class="section-title">MatchPoint в кадре</h2>
+          <p class="section-subtitle">
+            Живые моменты с кортов клуба: тренировки, турниры и наши чемпионы.
+          </p>
+        </div>
+
+        <div class="gallery-carousel" id="galleryCarousel" aria-roledescription="карусель" aria-label="Фотогалерея клуба" tabindex="0">
+          <div class="gallery-track" id="galleryTrack">
+            <figure class="gallery-slide">
+              <img src="media/live photo(1).jpg" alt="Теннисный корт клуба MatchPoint — фото 1" loading="lazy">
+              <figcaption class="gallery-caption">Корты клуба MatchPoint</figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img src="media/live photo(2).jpg" alt="Теннисный корт клуба MatchPoint — фото 2" loading="lazy">
+              <figcaption class="gallery-caption">Корты клуба MatchPoint</figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img src="media/live photo(3).jpg" alt="Теннисный корт клуба MatchPoint — фото 3" loading="lazy">
+              <figcaption class="gallery-caption">Корты клуба MatchPoint</figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img src="media/live photo(4).jpg" alt="Теннисный корт клуба MatchPoint — фото 4" loading="lazy">
+              <figcaption class="gallery-caption">Корты клуба MatchPoint</figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img src="media/live photo(5).jpg" alt="Теннисный корт клуба MatchPoint — фото 5" loading="lazy">
+              <figcaption class="gallery-caption">Корты клуба MatchPoint</figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img src="media/live photo(6).jpg" alt="Теннисный корт клуба MatchPoint — фото 6" loading="lazy">
+              <figcaption class="gallery-caption">Корты клуба MatchPoint</figcaption>
+            </figure>
+          </div>
+
+          <button class="gallery-nav gallery-prev" id="galleryPrev" type="button" aria-label="Предыдущее фото">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="gallery-nav gallery-next" id="galleryNext" type="button" aria-label="Следующее фото">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+
+          <div class="gallery-dots" id="galleryDots" aria-label="Выбор фотографии"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- ==================== 6. BOOKING FORM ==================== -->
     <section class="section booking-section" id="booking">
       <div class="container">
@@ -2557,6 +2722,101 @@ address {
     }
 
     updateMotion();
+  }
+
+  /* --- 6. Карусель фотогалереи: стрелки, точки, автопрокрутка и свайп --- */
+  const galleryCarousel = document.getElementById('galleryCarousel');
+  const galleryTrack = document.getElementById('galleryTrack');
+  const galleryPrev = document.getElementById('galleryPrev');
+  const galleryNext = document.getElementById('galleryNext');
+  const galleryDots = document.getElementById('galleryDots');
+
+  if (galleryCarousel && galleryTrack && galleryPrev && galleryNext && galleryDots) {
+    const slides = galleryTrack.children;
+    const AUTOPLAY_DELAY = 5000;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    let current = 0;
+    let autoTimer = 0;
+
+    // Точки создаются по количеству слайдов — не дублируем разметку вручную
+    for (let i = 0; i < slides.length; i++) {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'gallery-dot';
+      dot.setAttribute('aria-label', 'Фото ' + (i + 1) + ' из ' + slides.length);
+      dot.addEventListener('click', () => goTo(i));
+      galleryDots.appendChild(dot);
+    }
+
+    const render = () => {
+      galleryTrack.style.transform = 'translateX(' + (-current * 100) + '%)';
+      Array.from(galleryDots.children).forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === current);
+        dot.setAttribute('aria-current', i === current ? 'true' : 'false');
+      });
+    };
+
+    // Зацикливание: после последнего фото снова показываем первое
+    const goTo = (index) => {
+      current = (index + slides.length) % slides.length;
+      render();
+      restartAutoplay();
+    };
+
+    const stopAutoplay = () => {
+      if (autoTimer) {
+        clearInterval(autoTimer);
+        autoTimer = 0;
+      }
+    };
+
+    const startAutoplay = () => {
+      if (autoTimer || reduceMotion.matches || document.hidden) return;
+      autoTimer = setInterval(() => goTo(current + 1), AUTOPLAY_DELAY);
+    };
+
+    const restartAutoplay = () => {
+      stopAutoplay();
+      startAutoplay();
+    };
+
+    galleryPrev.addEventListener('click', () => goTo(current - 1));
+    galleryNext.addEventListener('click', () => goTo(current + 1));
+
+    // Пауза автопрокрутки при наведении курсора и фокусе с клавиатуры
+    galleryCarousel.addEventListener('mouseenter', stopAutoplay);
+    galleryCarousel.addEventListener('mouseleave', startAutoplay);
+    galleryCarousel.addEventListener('focusin', stopAutoplay);
+    galleryCarousel.addEventListener('focusout', startAutoplay);
+
+    // Клавиатура: стрелки влево/вправо, когда карусель в фокусе
+    galleryCarousel.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+    });
+
+    // Свайп на тачскринах и перетаскивание мышью
+    let pointerStartX = 0;
+    galleryTrack.addEventListener('pointerdown', (e) => { pointerStartX = e.clientX; });
+    galleryTrack.addEventListener('pointerup', (e) => {
+      const dx = e.clientX - pointerStartX;
+      if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopAutoplay();
+      else startAutoplay();
+    });
+    if (typeof reduceMotion.addEventListener === 'function') {
+      reduceMotion.addEventListener('change', () => {
+        if (reduceMotion.matches) stopAutoplay();
+        else startAutoplay();
+      });
+    }
+
+    render();
+    startAutoplay();
   }
 })();
   </script>
